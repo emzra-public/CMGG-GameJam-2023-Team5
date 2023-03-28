@@ -5,15 +5,7 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
-    private int memories;
+    public int memories;
     //[SerializeField] Inventory inventory = null;
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        ICollectible collectible = collision.GetComponent<ICollectible>();
-        if (collectible != null)
-        {
-            collectible.Collect();
-        }
-    }
 
 }
