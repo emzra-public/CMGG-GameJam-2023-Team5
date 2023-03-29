@@ -2,26 +2,31 @@ using UnityEngine;
 
 public enum GameState
 {
-    MainMenu,
-    InGame,
+    //MainMenu,
+    DarkScene,
     Paused,
     GameOver,
-    Cutscene
+    Cutscene1,
+    LightScene
 }
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    private GameState _currentState = GameState.DarkScene;
 
-    public void StartCutscene()
+    public void StartCutscene1()
     {
         previousState = CurrentState;
-        CurrentState = GameState.Cutscene;
+        CurrentState = GameState.Cutscene1;
     }
 
-    public void EndCutscene()
+    public void EndCutscene1()
     {
+        //Debug.Log("Current State Bf: " + CurrentState);
         CurrentState = previousState;
+        Debug.Log("Current State After: " + CurrentState);
+        Debug.Log("End Cutscene1 called");
     }
 
     public GameState CurrentState
@@ -33,8 +38,6 @@ public class GameManager : MonoBehaviour
             OnGameStateChanged?.Invoke(_currentState);
         }
     }
-
-    private GameState _currentState = GameState.MainMenu;
 
     public delegate void GameStateChanged(GameState newState);
     public event GameStateChanged OnGameStateChanged;
@@ -55,18 +58,18 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        CurrentState = GameState.InGame;
+        CurrentState = GameState.DarkScene;
     }
 
     public void PauseGame()
     {
-        if (CurrentState == GameState.InGame)
+        if (CurrentState == GameState.DarkScene)
         {
             CurrentState = GameState.Paused;
         }
         else if (CurrentState == GameState.Paused)
         {
-            CurrentState = GameState.InGame;
+            CurrentState = GameState.DarkScene;
         }
     }
 
@@ -75,9 +78,9 @@ public class GameManager : MonoBehaviour
         CurrentState = GameState.GameOver;
     }
 
-    public void ReturnToMainMenu()
+/*    public void ReturnToMainMenu()
     {
         CurrentState = GameState.MainMenu;
-    }
+    }*/
 
 }

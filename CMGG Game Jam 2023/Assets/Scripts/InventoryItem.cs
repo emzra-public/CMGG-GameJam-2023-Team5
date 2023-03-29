@@ -19,7 +19,7 @@ public class InventoryItem : MonoBehaviour
             Inventory.UpdateMemories();
             Destroy(this.gameObject);
             Debug.Log("Memory Collected: " + Inventory.memories);
-            GameManager.Instance.StartCutscene();
+            GameManager.Instance.StartCutscene1();
         }
     }
 }
