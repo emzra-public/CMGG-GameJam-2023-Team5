@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class CutsceneText2 : MonoBehaviour
+public class CutsceneText1 : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.03f;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -23,7 +23,7 @@ public class CutsceneText2 : MonoBehaviour
         dialogueLines.Add("“Sooo,” she calls out in a sing-song voice, snapping me back into this reality. “I didn’t find any water buuut I did find this!” Bemused, I watch as she reaches up to place a perfectly woven flower crown onto my head.");
         dialogueLines.Add("“Where did you-” “Hey, stranger!” she interrupts. Her face twists up into an all-knowing smile and her eyes glitter with intent. “You look pretty cute with that on. Keep it!”");
         dialogueLines.Add("A blush creeps up onto my face, and I furiously look away. “Y-you know, I’d rather not die of thirst right now so, ummm… let’s keep moving…!”");
-
+        
 
         // Add more lines as needed.
         StartCoroutine(TypeText(dialogueLines[currentLine]));
@@ -33,12 +33,6 @@ public class CutsceneText2 : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
-        if (dialogueText == null)
-        {
-            Debug.LogError("dialogueText is not assigned in the Unity Inspector.");
-            yield break;
-        }
-
         isTyping = true;
         dialogueText.text = "";
         foreach (char letter in text.ToCharArray())
@@ -48,7 +42,6 @@ public class CutsceneText2 : MonoBehaviour
         }
         isTyping = false;
     }
-
 
 
     public void NextLine()
