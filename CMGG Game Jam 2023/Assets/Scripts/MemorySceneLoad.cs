@@ -4,9 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class MemorySceneLoad : MonoBehaviour
 {
+    public int memoryID;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         
+
         if (Inventory.memories == null)
         {
             Debug.Log("This object does not have the proper scene assigned.");
@@ -18,6 +21,7 @@ public class MemorySceneLoad : MonoBehaviour
         switch (Inventory.memories)
         {
             case 1:
+                //SceneManager.LoadSceneAsync("Cutscene 1", LoadSceneMode.Additive);
                 SceneManager.LoadScene("Cutscene 1");
                 Debug.Log("Scene Found");
                 break;

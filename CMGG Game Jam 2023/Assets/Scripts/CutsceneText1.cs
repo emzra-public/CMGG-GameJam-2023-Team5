@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CutsceneText1 : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CutsceneText1 : MonoBehaviour
     private List<string> dialogueLines = new List<string>();
     private int currentLine = 0;
     private bool isTyping = false;
+    SavePlayerPos playerPosData;
+
 
     private void Start()
     {
@@ -51,8 +54,12 @@ public class CutsceneText1 : MonoBehaviour
             {
                 // Optional: Hide or disable the dialogue box when all lines have been shown.
                 // gameObject.SetActive(false);
-                GameManager.Instance.EndCutscene1();
+                //GameManager.Instance.EndCutscene1();
+
                 Debug.Log("Check else is running");
+
+                SceneManager.LoadScene("Dark Scene");
+
             }
         }
     }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -13,36 +14,21 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private GameState _currentState = GameState.DarkScene;
+    
+    private Vector3 playerPosition;
 
-    public void StartCutscene1()
+/*    private void OnEnable()
     {
-        previousState = CurrentState;
-        CurrentState = GameState.Cutscene1;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    public void EndCutscene1()
+    private void OnDisable()
     {
-        //Debug.Log("Current State Bf: " + CurrentState);
-        CurrentState = previousState;
-        Debug.Log("Current State After: " + CurrentState);
-        Debug.Log("End Cutscene1 called");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
-
-    public GameState CurrentState
-    {
-        get => _currentState;
-        set
-        {
-            _currentState = value;
-            OnGameStateChanged?.Invoke(_currentState);
-        }
-    }
-
-    public delegate void GameStateChanged(GameState newState);
-    public event GameStateChanged OnGameStateChanged;
-    private GameState previousState;
-
+*/
     private void Awake()
     {
         if (Instance == null)
@@ -58,29 +44,31 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        CurrentState = GameState.DarkScene;
+        
     }
 
     public void PauseGame()
     {
-        if (CurrentState == GameState.DarkScene)
+/*        if (CurrentState == GameState.DarkScene)
         {
             CurrentState = GameState.Paused;
         }
         else if (CurrentState == GameState.Paused)
         {
             CurrentState = GameState.DarkScene;
-        }
+        }*/
     }
 
     public void GameOver()
     {
-        CurrentState = GameState.GameOver;
+        
     }
 
-/*    public void ReturnToMainMenu()
-    {
-        CurrentState = GameState.MainMenu;
-    }*/
+    /*    public void ReturnToMainMenu()
+        {
+            CurrentState = GameState.MainMenu;
+        }*/
+
 
 }
+

@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryItem : MonoBehaviour
 {
     public ItemData itemData;
     [SerializeField] Inventory inventory = null;
+    SavePlayerPos playerPosData;
 
+    void Start()
+    {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+    }   
+    
     public InventoryItem(ItemData item)
     {
         itemData = item;
@@ -17,9 +24,11 @@ public class InventoryItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Inventory.UpdateMemories();
-            Destroy(this.gameObject);
             Debug.Log("Memory Collected: " + Inventory.memories);
-            GameManager.Instance.StartCutscene1();
+            //SceneManager.LoadSceneAsync("Cutscene 1", LoadSceneMode.Additive);
+            //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Cutscene 1"));
+            SavePlayerPos.SavePosition();
         }
     }
+
 }
