@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Memory
+  - hoverAnchor
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class CutsceneText1 : MonoBehaviour
+public class CutsceneText2 : MonoBehaviour
 {
     [SerializeField] private float typingSpeed = 0.04f;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -18,12 +18,13 @@ public class CutsceneText1 : MonoBehaviour
 
     private void Start()
     {
-        dialogueLines.Add("I close my eyes and take a deep breath. The air is so crisp and fresh up here in the mountains... When I re-open my eyes, I can’t help but stand still in awe. I’ve never seen so many flowers in one place before... ");
-        dialogueLines.Add("At this point, I hardly mind waiting for her to come back. I know I just met her today, but she seems pretty cool. I wonder if she would want to be my friend…");
-        dialogueLines.Add("“Sooo,” she calls out in a sing-song voice, snapping me back into this reality. “I didn’t find any water buuut I did find this!” Bemused, I watch as she reaches up to place a perfectly woven flower crown onto my head.");
-        dialogueLines.Add("“Where did you-” “Hey, stranger!” she interrupts. Her face twists up into an all-knowing smile and her eyes glitter with intent. “You look pretty cute with that on. Keep it!”");
-        dialogueLines.Add("A blush creeps up onto my face, and I furiously look away. “Y-you know, I’d rather not die of thirst right now so, ummm… let’s keep moving…!”");
-        
+        dialogueLines.Add("Her flower in my hair. Our fingers interlaced, as if we are one.");
+        dialogueLines.Add("The bittersweet sound of children laughing fills the air as the spring’s bloom swirls around us. I pull out my phone to capture the moment, because I know I’ll want to remember this forever.");
+        dialogueLines.Add("She gently grabs my arm to adjust the camera’s angle, and I watch with piqued curiosity as she positions her hand perfectly against mine. A heart. So cheesy.");
+        dialogueLines.Add("We spend the rest of the day in our childlike wonder, getting drunk off of each other’s auras, forgetting what it’s like to be responsible adults with full-time jobs and lives.");
+        dialogueLines.Add("But as the adults say, all good things must come to an end.");
+        dialogueLines.Add("She envelopes my palms in her own before clasping my fingers over what appears to be a locket. “Now you can never forget me.” Blinding moonlight obscures her face, but I imagine her eyes crinkling as she smiles.");
+
         StartCoroutine(TypeText(dialogueLines[currentLine]));
         Debug.Log("type text work");
 
@@ -71,7 +72,6 @@ public class CutsceneText1 : MonoBehaviour
             // added to skip cutscenes during testing, remove for prod
             SceneManager.LoadScene("Dark Scene");
             NextLine();
-
         }
     }
 }
