@@ -7,8 +7,24 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D body;
-    
+    public GameObject[] memoryObjs;
     private bool grounded;
+
+    private void Start()
+    {
+        for (int i = 0; i < memoryObjs.Length; i++)
+        {
+            if (i == Inventory.memories)
+            {
+                memoryObjs[i].SetActive(true);
+            }
+            else {
+                memoryObjs[i].SetActive(false);
+            }
+
+        }
+        SavePlayerPos.LoadPosition();
+    }
 
     private void Awake()
     {
