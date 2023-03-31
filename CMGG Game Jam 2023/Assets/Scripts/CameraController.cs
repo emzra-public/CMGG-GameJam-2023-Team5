@@ -12,10 +12,16 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        // liz's notes?
         // transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosX, transform.position.y, transform.position.z), ref velocity, speed * Time.deltaTime);
-        
-        //Follow player
-        transform.position = new Vector3(player.position.x, transform.position.y, transform.position.z);
+
+        // raises camera a bit
+        float cameraYOffset = 2.0f;
+
+        // camera follows player
+        transform.position = new Vector3(player.position.x, transform.position.y + cameraYOffset, transform.position.z);
+       
+
     }
 
     public void MoveToNewRoom(Transform _newRoom)

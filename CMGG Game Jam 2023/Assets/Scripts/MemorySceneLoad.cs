@@ -21,7 +21,6 @@ public class MemorySceneLoad : MonoBehaviour
         switch (Inventory.memories)
         {
             case 1:
-                //SceneManager.LoadSceneAsync("Cutscene 1", LoadSceneMode.Additive);
                 SceneManager.LoadScene("Cutscene 1");
                 Debug.Log("Scene Found");
                 break;

@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        //memories = 0;
     }
 
     private void Update()
