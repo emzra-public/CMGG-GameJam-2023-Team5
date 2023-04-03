@@ -296,7 +296,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 182.38542
+  orthographic size: 539.5497
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324213724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 485, y: 175, z: -10}
+  m_LocalPosition: {x: 961, y: 539, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -575,8 +575,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864036144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.112, y: -7, z: 0}
-  m_LocalScale: {x: 101.99022, y: 52.253506, z: 39.949165}
+  m_LocalPosition: {x: 3.6401, y: -5.3878, z: 0}
+  m_LocalScale: {x: 83.73397, y: 62.944572, z: 39.949165}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1518721393}
@@ -656,11 +656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 575.358
+      value: 601.0866
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 444.193
+      value: 464.0562
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -692,11 +692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -697.329
+      value: -558.13574
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220.349
+      value: -265.9316
       objectReference: {fileID: 0}
     - target: {fileID: 7499663695194408612, guid: 5d9eb808208a70644942c459d8c1359a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
