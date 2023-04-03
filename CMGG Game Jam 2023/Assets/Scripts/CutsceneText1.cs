@@ -68,8 +68,7 @@ public class CutsceneText1 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // added to skip cutscenes during testing, remove for prod
-            //SceneManager.LoadScene("Dark Scene");
+
             NextLine();
 
         }
