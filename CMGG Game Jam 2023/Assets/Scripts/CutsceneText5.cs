@@ -13,6 +13,7 @@ public class CutsceneText5 : MonoBehaviour
     private List<string> dialogueLines = new List<string>();
     private int currentLine = 0;
     private bool isTyping = false;
+    public static bool cutsceneFiveRan = false;
     SavePlayerPos playerPosData;
 
 
@@ -70,6 +71,7 @@ public class CutsceneText5 : MonoBehaviour
         {
             // added to skip cutscenes during testing, remove for prod
             SceneManager.LoadScene("Dark Scene");
+            cutsceneFiveRan = true; 
             NextLine();
         }
     }

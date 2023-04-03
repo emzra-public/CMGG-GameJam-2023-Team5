@@ -68,7 +68,6 @@ public class CutsceneText1 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
             NextLine();
 
         }
