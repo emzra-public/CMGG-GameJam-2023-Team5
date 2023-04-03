@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
             else {
                 memoryObjs[i].SetActive(false);
             }
-
         }
         SavePlayerPos.LoadPosition();
     }
