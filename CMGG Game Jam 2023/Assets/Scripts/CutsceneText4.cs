@@ -54,12 +54,10 @@ public class CutsceneText4 : MonoBehaviour
             }
             else
             {
-
                 Debug.Log("Check else is running");
 
                 gameObject.SetActive(false);
                 SceneManager.LoadScene("Dark Scene");
-
             }
         }
     }
@@ -68,8 +66,7 @@ public class CutsceneText4 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // added to skip cutscenes during testing, remove for prod
-            SceneManager.LoadScene("Dark Scene");
+
             NextLine();
         }
     }
