@@ -59,17 +59,15 @@ public class CutsceneText5 : MonoBehaviour
 
                 gameObject.SetActive(false);
                 SceneManager.LoadScene("Dark Scene");
-
             }
         }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
-            // added to skip cutscenes during testing, remove for prod
-            SceneManager.LoadScene("Dark Scene");
+
             NextLine();
         }
     }
