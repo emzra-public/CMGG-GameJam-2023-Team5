@@ -25,7 +25,6 @@ public class LightSceneText1 : MonoBehaviour
         dialogueLines.Add("I can't reassure you that you'll be able to return home...");
         dialogueLines.Add("Although, you still have a chance to relive the moments that mattered most.");
         dialogueLines.Add("Go on! Before it is too late even for that!");
-
         StartCoroutine(TypeText(dialogueLines[currentLine]));
     }
 
