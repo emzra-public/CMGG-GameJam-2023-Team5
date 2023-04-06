@@ -20,11 +20,11 @@ public class LightSceneText1 : MonoBehaviour
     {
 
         dialogueLines.Add("Hello, wanderer.");
-        dialogueLines.Add("You appear to be a faraways from home.");
-        dialogueLines.Add("Allow me to guide you on your journey.");
-        dialogueLines.Add("The path beyond has been cleared for your arrival. Go forth, towards the light.");
-        dialogueLines.Add("Hurry! Before it's too late!");
-
+        dialogueLines.Add("You must be feeling quite lost.");
+        dialogueLines.Add("Your memory has been deteriorating at an increasing speed...");
+        dialogueLines.Add("I can't reassure you that you'll be able to return home...");
+        dialogueLines.Add("Although, you still have a chance to relive the moments that mattered most.");
+        dialogueLines.Add("Go on! Before it is too late even for that!");
         StartCoroutine(TypeText(dialogueLines[currentLine]));
     }
 
@@ -49,7 +49,7 @@ public class LightSceneText1 : MonoBehaviour
             if (currentLine < dialogueLines.Count)
             {
                 StartCoroutine(TypeText(dialogueLines[currentLine]));
-                if (currentLine == 4)
+                if (currentLine == 5)
                 {
                     StartCoroutine(PanCamera());
                     yield return StartCoroutine(MovePlayer(new Vector3(15f, 0f, 0f), 1.0f));

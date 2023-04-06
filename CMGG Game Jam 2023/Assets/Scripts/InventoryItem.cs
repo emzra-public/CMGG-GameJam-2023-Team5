@@ -25,8 +25,6 @@ public class InventoryItem : MonoBehaviour
         {
             Inventory.UpdateMemories();
             Debug.Log("Memory Collected: " + Inventory.memories);
-            //SceneManager.LoadSceneAsync("Cutscene 1", LoadSceneMode.Additive);
-            //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Cutscene 1"));
             SavePlayerPos.SavePosition();
         }
     }
