@@ -10,7 +10,7 @@ WASD to move around the scene.
 
 SPACEBAR to jump.
 
-SHIFT to move through dialogue.
+LEFT CLICK to move through dialogue.
 
 # Credit
 
