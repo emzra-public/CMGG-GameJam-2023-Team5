@@ -18,9 +18,9 @@ public class CutsceneText4 : MonoBehaviour
 
     private void Start()
     {
-        dialogueLines.Add("I don’t understand what’s going on. I don’t know what's happening. I don’t know I don’t know I don’t know I don’t know I don’t know I don’t know");
-        dialogueLines.Add("Why is she always so upset? She says she still loves me afterwards but I’m just so tired of the fighting… I have no idea what we’re even fighting about!");
-        dialogueLines.Add("Something about an important date... anniversary... something like that. I could have sworn that I had written down whatever she’s mad about this time in my… my…");
+        dialogueLines.Add("I don't understand whatï¿½s going on. I don't know what's happening. I don't know I don't know I don't know I don't know I don't know I don't know");
+        dialogueLines.Add("Why is she always so upset? She says she still loves me afterwards but I'm just so tired of the fighting. I have no idea what we're even fighting about!");
+        dialogueLines.Add("Something about an important date... anniversary... something like that. I could have sworn that I had written down whatever sheï¿½s mad about this time in my... my...");
         dialogueLines.Add("...");
         dialogueLines.Add("What was I talking about again?");
 
