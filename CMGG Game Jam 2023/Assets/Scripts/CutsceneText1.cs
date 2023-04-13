@@ -13,6 +13,8 @@ public class CutsceneText1 : MonoBehaviour
     private List<string> dialogueLines = new List<string>();
     private int currentLine = 0;
     private bool isTyping = false;
+    private bool skipTyping = false;
+
     SavePlayerPos playerPosData;
 
 
@@ -29,16 +31,23 @@ public class CutsceneText1 : MonoBehaviour
     }
 
     private IEnumerator TypeText(string text)
+{
+    isTyping = true;
+    dialogueText.text = "";
+    foreach (char letter in text.ToCharArray())
     {
-        isTyping = true;
-        dialogueText.text = "";
-        foreach (char letter in text.ToCharArray())
+        if (skipTyping)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            dialogueText.text = text;
+            skipTyping = false;
+            break;
         }
-        isTyping = false;
+        dialogueText.text += letter;
+        yield return new WaitForSeconds(typingSpeed);
     }
+    isTyping = false;
+}
+
 
 
     public void NextLine()
@@ -63,13 +72,19 @@ public class CutsceneText1 : MonoBehaviour
         }
     }
 
-    private void Update()
+  private void Update()
+{
+    if (Input.GetMouseButtonDown(0))
     {
-        if (Input.GetMouseButtonDown(0))
+        if (isTyping)
         {
-
+            skipTyping = true;
+        }
+        else
+        {
             NextLine();
-
         }
     }
+}
+
 }
