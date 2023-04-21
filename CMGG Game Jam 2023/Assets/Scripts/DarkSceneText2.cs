@@ -30,7 +30,7 @@ public class DarkSceneText2 : MonoBehaviour
 
     public void Update()
     {
-        if (CutsceneText5.cutsceneFiveRan && Inventory.memories == 5)
+        if (Inventory.memories == 5)
         {
             dialoguePanel.SetActive(true);
             StartDialogue();

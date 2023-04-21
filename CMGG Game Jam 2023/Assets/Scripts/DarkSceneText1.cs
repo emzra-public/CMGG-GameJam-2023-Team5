@@ -24,7 +24,7 @@ public class DarkSceneText1 : MonoBehaviour
 
     private void Update()
     {
-        if (CutsceneText5.cutsceneFiveRan && Inventory.memories == 5 && !dialogueStarted) // Check if dialogue has already started or not
+        if (Inventory.memories == 5 && !dialogueStarted) // Check if dialogue has already started or not
         {
             dialogueStarted = true;
             dialoguePanel.SetActive(true);
