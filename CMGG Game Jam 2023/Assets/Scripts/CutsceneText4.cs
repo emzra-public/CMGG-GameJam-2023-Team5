@@ -13,14 +13,16 @@ public class CutsceneText4 : MonoBehaviour
     private List<string> dialogueLines = new List<string>();
     private int currentLine = 0;
     private bool isTyping = false;
+    private bool skipTyping = false;
+
     SavePlayerPos playerPosData;
 
 
     private void Start()
     {
-        dialogueLines.Add("I don’t understand what’s going on. I don’t know what's happening. I don’t know I don’t know I don’t know I don’t know I don’t know I don’t know");
-        dialogueLines.Add("Why is she always so upset? She says she still loves me afterwards but I’m just so tired of the fighting… I have no idea what we’re even fighting about!");
-        dialogueLines.Add("Something about an important date... anniversary... something like that. I could have sworn that I had written down whatever she’s mad about this time in my… my…");
+        dialogueLines.Add("I don't understand whatï¿½s going on. I don't know what's happening. I don't know I don't know I don't know I don't know I don't know I don't know");
+        dialogueLines.Add("Why is she always so upset? She says she still loves me afterwards but I'm just so tired of the fighting. I have no idea what we're even fighting about!");
+        dialogueLines.Add("Something about an important date... anniversary... something like that. I could have sworn that I had written down whatever sheï¿½s mad about this time in my... my...");
         dialogueLines.Add("...");
         dialogueLines.Add("What was I talking about again?");
 
@@ -29,17 +31,23 @@ public class CutsceneText4 : MonoBehaviour
 
     }
 
-    private IEnumerator TypeText(string text)
+private IEnumerator TypeText(string text)
+{
+    isTyping = true;
+    dialogueText.text = "";
+    foreach (char letter in text.ToCharArray())
     {
-        isTyping = true;
-        dialogueText.text = "";
-        foreach (char letter in text.ToCharArray())
+        if (skipTyping)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            dialogueText.text = text;
+            skipTyping = false;
+            break;
         }
-        isTyping = false;
+        dialogueText.text += letter;
+        yield return new WaitForSeconds(typingSpeed);
     }
+    isTyping = false;
+}
 
 
     public void NextLine()
@@ -63,11 +71,17 @@ public class CutsceneText4 : MonoBehaviour
     }
 
     private void Update()
+{
+    if (Input.GetMouseButtonDown(0))
     {
-        if (Input.GetMouseButtonDown(0))
+        if (isTyping)
         {
-
+            skipTyping = true;
+        }
+        else
+        {
             NextLine();
         }
     }
+}
 }
