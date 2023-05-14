@@ -28,7 +28,7 @@ public class CutsceneText3 : MonoBehaviour
         dialogueLines.Add("“I still can't believe you left the ring out on the dining table the day before.” Her tone is genuine, but all I can do is stare in absolute disbelief. That's why I wasn't shocked when you proposed, silly!");
         dialogueLines.Add("She laughs as if she didn't just turn my own world upside down before shifting her attention back to the TV and returning into my arms. ");
         dialogueLines.Add("The worst part is that I literally have no recollection of that. Was I really that absentminded?");
-
+*/
         StartCoroutine(TypeText(dialogueLines[currentLine]));
         Debug.Log("type text work");
 

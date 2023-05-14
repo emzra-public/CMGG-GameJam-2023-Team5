@@ -26,7 +26,7 @@ public class CutsceneText5 : MonoBehaviour
         dialogueLines.Add("All of a sudden, the woman besides me bursts into tears. When she pulls her face out of her hands, I let out an inaudible gasp.");
         dialogueLines.Add("Her. I rack my brain for a name but she walks right through me as if I wasn't even there. As if I didn't exist. I understand everything now.");
         dialogueLines.Add("I don't let this revelation stop me. With as much courage as I can muster, I call out my lover by her name.");
-        
+
         StartCoroutine(TypeText(dialogueLines[currentLine]));
         Debug.Log("type text work");
 
